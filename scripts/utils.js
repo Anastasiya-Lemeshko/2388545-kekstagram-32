@@ -1,0 +1,1 @@
+var a=(t,o)=>{let e=Math.ceil(Math.min(t,o)),n=Math.floor(Math.max(t,o)),r=Math.random()*(n-e+1)+e;return Math.floor(r)},s=t=>t[a(0,t.length-1)],c=t=>t.key==="Escape",l=t=>t.key==="Enter",h=(t,o=500)=>{let e;return(...n)=>{clearTimeout(e),e=setTimeout(()=>t.apply(void 0,n),o)}};export{h as debounce,s as getRandomArrayElement,l as isEnterKey,c as isEscapeKey};

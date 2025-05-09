@@ -1,0 +1,1 @@
+var e=5e3;var o=document.querySelector("#data-error").content.querySelector(".data-error"),s=()=>{let t=o.cloneNode(!0);document.body.appendChild(t),setTimeout(()=>{t.remove()},e)};export{s as showDataError};

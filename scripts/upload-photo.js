@@ -1,0 +1,1 @@
+var n=["jpg","jpeg","png"],c=document.querySelector(".img-upload__input"),r=document.querySelector(".img-upload__preview img"),i=document.querySelectorAll(".effects__preview");c.addEventListener("change",()=>{let t=c.files[0],o=t.name.toLowerCase();if(n.some(e=>o.endsWith(e))){let e=URL.createObjectURL(t);r.src=e,i.forEach(s=>{s.style.backgroundImage=`url(${e})`})}});
