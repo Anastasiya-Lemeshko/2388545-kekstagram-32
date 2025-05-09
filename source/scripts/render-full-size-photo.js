@@ -23,7 +23,7 @@ const renderComment = ({ avatar, message, name }) => {
   newElement.innerHTML = '<img class="social__picture"><p class="social__text"></p>';
 
   const commentAvatar = newElement.querySelector('.social__picture');
-  commentAvatar.src = avatar;
+  commentAvatar.src = avatar.replace('img/', 'images/');
   commentAvatar.alt = name;
   commentAvatar.width = AVATAR_WIDTH;
   commentAvatar.height = AVATAR_HEIGHT;
@@ -60,7 +60,7 @@ const renderComments = () => {
 };
 
 const renderFullSizePhoto = ({ likes, comments, url, description }) => {
-  imgElement.src = url;
+  imgElement.src = `images/${url}`;
   imgElement.alt = description;
   likesElement.textContent = likes;
   descriptionElement.textContent = description;

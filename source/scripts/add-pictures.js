@@ -19,7 +19,7 @@ const getPhotoList = (photoArray) => {
 
   photoArray.forEach(({ id, url, description, likes, comments }) => {
     const photoElement = pictureTemplate.cloneNode(true);
-    photoElement.querySelector('.picture__img').src = url;
+    photoElement.querySelector('.picture__img').src = `images/${url}`;
     photoElement.querySelector('.picture__img').alt = description;
     photoElement.querySelector('.picture__likes').textContent = likes;
     photoElement.querySelector('.picture__comments').textContent = comments.length;
